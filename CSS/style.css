@@ -1153,36 +1153,91 @@ section {
         bottom: 15px;
     }
 }
-<!-- =====================================================
-     SECCIÓN CARTA - SOBRE AZUL Y CARTA INTERIOR
-====================================================== -->
-<section class="letter-section section">
-    <div class="section-container visible">
-        
-        <div class="envelope-wrapper">
-            <!-- Solapa trasera superior abierta -->
-            <div class="envelope-top"></div>
+/* =====================================================
+   ESTRUTURA DE SOBRE Y CARTA REALISTA
+====================================================== */
+.letter-section {
+    padding: 60px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            <!-- Carta interior blanca -->
-            <div class="letter-card">
-                <p class="letter-text">
-                    Me haría mucha ilusión que me acompañes a celebrar mis XV años. 
-                    Es un momento especial para mí y me encantaría compartirlo 
-                    con las personas que más quiero.
-                </p>
-                <p class="letter-text">
-                    Tu presencia haría que esta noche sea aún más inolvidable.
-                </p>
-            </div>
+.envelope-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-            <!-- Bolsillo frontal del sobre -->
-            <div class="envelope-pocket"></div>
+/* Solapa trasera (fondo del sobre abierto) */
+.envelope-top {
+    width: 100%;
+    height: 140px;
+    background-color: #5377a6;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    border-radius: 8px 8px 0 0;
+}
 
-            <!-- Sello de lacre azul -->
-            <div class="wax-seal">
-                <span class="seal-icon">🦋</span>
-            </div>
-        </div>
+/* Tarjeta de papel blanca sobresaliendo */
+.letter-card {
+    position: relative;
+    z-index: 2;
+    width: 86%;
+    background: #ffffff;
+    padding: 35px 25px 35px 25px;
+    margin-top: -90px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
 
-    </div>
-</section>
+.letter-text {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #5a6b7c;
+    margin-bottom: 15px;
+}
+
+.letter-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Frente del sobre (bolsillo inferior en V) */
+.envelope-pocket {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 210px;
+    background-color: #7296ca;
+    margin-top: -100px;
+    clip-path: polygon(0 0, 50% 45%, 100% 0, 100% 100%, 0 100%);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Sello de lacre central */
+.wax-seal {
+    position: absolute;
+    bottom: 90px;
+    z-index: 4;
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle at 35% 35%, #b2d3f9, #567ea3 65%, #355373);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+    border: 2px solid #8cb3e8;
+}
+
+.seal-icon {
+    font-size: 1.6rem;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
