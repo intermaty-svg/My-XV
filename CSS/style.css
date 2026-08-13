@@ -1153,93 +1153,36 @@ section {
         bottom: 15px;
     }
 }
-/* =====================================================
-   DISEÑO DE SOBRE AZUL CON CARTA Y SELLO DE LACRE
-====================================================== */
+<!-- =====================================================
+     SECCIÓN CARTA - SOBRE AZUL Y CARTA INTERIOR
+====================================================== -->
+<section class="letter-section section">
+    <div class="section-container visible">
+        
+        <div class="envelope-wrapper">
+            <!-- Solapa trasera superior abierta -->
+            <div class="envelope-top"></div>
 
-.letter-section {
-    padding: 50px 15px;
-    display: flex;
-    justify-content: center;
-}
+            <!-- Carta interior blanca -->
+            <div class="letter-card">
+                <p class="letter-text">
+                    Me haría mucha ilusión que me acompañes a celebrar mis XV años. 
+                    Es un momento especial para mí y me encantaría compartirlo 
+                    con las personas que más quiero.
+                </p>
+                <p class="letter-text">
+                    Tu presencia haría que esta noche sea aún más inolvidable.
+                </p>
+            </div>
 
-.envelope-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 440px;
-    margin: 0 auto;
-    padding-top: 110px;
-    padding-bottom: 20px;
-    filter: drop-shadow(0px 12px 25px rgba(0, 0, 0, 0.15));
-}
+            <!-- Bolsillo frontal del sobre -->
+            <div class="envelope-pocket"></div>
 
-/* Interior oscuro del sobre */
-.envelope-back {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    width: 100%;
-    height: 180px;
-    background: #628ab2;
-    clip-path: polygon(0 0, 50% 45%, 100% 0, 100% 100%, 0 100%);
-    border-radius: 8px 8px 0 0;
-}
+            <!-- Sello de lacre azul -->
+            <div class="wax-seal">
+                <span class="seal-icon">🦋</span>
+            </div>
+        </div>
 
-/* Tarjeta interior */
-.letter-card {
-    position: relative;
-    z-index: 2;
-    width: 88%;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 35px 25px 25px 25px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    text-align: center;
-}
-
-.letter-text {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-style: italic;
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: #7a6e65;
-    margin-bottom: 12px;
-}
-
-.letter-text.highlighted {
-    margin-bottom: 0;
-}
-
-/* Solapa frontal inferior (forma en 'V') */
-.envelope-front {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 220px;
-    background: #81a8dc;
-    clip-path: polygon(0 100%, 50% 35%, 100% 100%);
-    border-radius: 0 0 8px 8px;
-    z-index: 3;
-}
-
-/* Sello de Lacre */
-.wax-seal {
-    position: absolute;
-    bottom: 115px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    background: radial-gradient(circle at 35% 35%, #b2d0f7 0%, #6892c2 60%, #4a719c 100%);
-    border: 3px solid #9bbde8;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.6);
-    z-index: 4;
-}
+    </div>
+</section>
