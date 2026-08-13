@@ -1,3 +1,4 @@
+/* CSS/style.css */
 /* =========================================================
    CONFIGURACIÓN GENERAL
 ========================================================= */
@@ -407,6 +408,63 @@ section {
 
     font-weight: 400;
     color: var(--azul-rey);
+}
+
+
+/* =========================================================
+   CARTA DE INVITACIÓN
+========================================================= */
+
+.letter-section {
+    background: linear-gradient(
+        135deg,
+        #f6fbff,
+        #eaf7ff
+    );
+    padding: 80px 20px;
+}
+
+.envelope-card {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 50px 35px;
+    border-radius: 25px;
+    border: 1px solid rgba(23, 78, 166, 0.2);
+    box-shadow: 0 15px 40px rgba(23, 78, 166, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.envelope-card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px dashed rgba(23, 78, 166, 0.25);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.envelope-seal {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.letter-text {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(20px, 3.5vw, 27px);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--azul-profundo);
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.letter-ornament {
+    color: var(--dorado);
+    font-size: 28px;
+    margin-top: 20px;
 }
 
 
@@ -1094,59 +1152,4 @@ section {
         right: 15px;
         bottom: 15px;
     }
-}
-/* =========================================================
-   CARTA DE INVITACIÓN
-========================================================= */
-
-.letter-section {
-    background: linear-gradient(
-        135deg,
-        #f6fbff,
-        #eaf7ff
-    );
-    padding: 80px 20px;
-}
-
-.envelope-card {
-    max-width: 680px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 50px 35px;
-    border-radius: 25px;
-    border: 1px solid rgba(23, 78, 166, 0.2);
-    box-shadow: 0 15px 40px rgba(23, 78, 166, 0.1);
-    position: relative;
-    text-align: center;
-}
-
-.envelope-card::before {
-    content: "";
-    position: absolute;
-    inset: 12px;
-    border: 1px dashed rgba(23, 78, 166, 0.25);
-    border-radius: 18px;
-    pointer-events: none;
-}
-
-.envelope-seal {
-    font-size: 38px;
-    margin-bottom: 15px;
-}
-
-.letter-text {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(20px, 3.5vw, 27px);
-    font-style: italic;
-    font-weight: 500;
-    line-height: 1.8;
-    color: var(--azul-profundo);
-    max-width: 580px;
-    margin: 0 auto;
-}
-
-.letter-ornament {
-    color: var(--dorado);
-    font-size: 28px;
-    margin-top: 20px;
 }
